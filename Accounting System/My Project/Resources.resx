@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="data_backup_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\data_backup_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0fd6fa974c9a40fbcb9b0a6ed60bb781" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\0fd6fa974c9a40fbcb9b0a6ed60bb781.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA00043" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="increase_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\increase_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1769490add59b6e4adf8e63815fb81d4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\1769490add59b6e4adf8e63815fb81d4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moon_and_stars_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\moon_and_stars_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8c2e55c200d238e8b7eef2906aab0d11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\8c2e55c200d238e8b7eef2906aab0d11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5c8f08b5fe55e12baae6fc54e46c343a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\5c8f08b5fe55e12baae6fc54e46c343a.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reading_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\reading_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f49ab0f97efe22bba7e6be00e1f60434" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\f49ab0f97efe22bba7e6be00e1f60434.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0f65c227b3198b5e00e6f19a2b4712de1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\0f65c227b3198b5e00e6f19a2b4712de.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clock_80px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\clock_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accounting_40px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\accounting_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\trash_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accounting_40px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\accounting_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\print_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA00042" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="٢٠٢٦٠٤١٥_١٢٤٤٣٢" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\٢٠٢٦٠٤١٥_١٢٤٤٣٢.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_file_40px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\check_file_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service_50px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\service_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coins_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\coins_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\search_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easy_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\easy_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easy_50px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\easy_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="join_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\join_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\close_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3fc8d7ae8769ecfe67464318250854401" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\3fc8d7ae8769ecfe6746431825085440.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receive_cash_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\receive_cash_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="handshake_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\handshake_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easy_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\easy_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA00041" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\calendar_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_groups_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\user_groups_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash_in_hand_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\cash_in_hand_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_account_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\user_account_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash_in_hand_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\cash_in_hand_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA0004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receipt_40px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\receipt_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submit_resume_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\submit_resume_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trust_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\trust_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="todo_list_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\todo_list_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0f65c227b3198b5e00e6f19a2b4712de" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\0f65c227b3198b5e00e6f19a2b4712de.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receipt_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\receipt_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\service_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submit_resume_40px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\submit_resume_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA00044" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accounting_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\accounting_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clock_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\clock_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="microsoft_excel_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\microsoft_excel_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="92043cab19b718df0f85154fc7654159" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\92043cab19b718df0f85154fc7654159.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="natural_user_interface_2_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\natural_user_interface_2_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\service_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\close_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="receive_cash_40px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\receive_cash_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\pdf_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="submit_resume_40px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\submit_resume_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash_in_hand_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\cash_in_hand_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="611b0d248e0b1956a2759322d5ba7f50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\611b0d248e0b1956a2759322d5ba7f50.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="246fd1e8826c775f410773d931e4273a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\246fd1e8826c775f410773d931e4273a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\trash_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3fc8d7ae8769ecfe6746431825085440" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\3fc8d7ae8769ecfe6746431825085440.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="form_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\form_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="natural_user_interface_2_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\natural_user_interface_2_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_groups_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\user_groups_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG-20251103-WA00045" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\IMG-20251103-WA0004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="video_conference_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\video_conference_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_file_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\check_file_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insurance_agent_skin_type_5_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\insurance_agent_skin_type_5_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="increase_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\increase_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="246fd1e8826c775f410773d931e4273a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\246fd1e8826c775f410773d931e4273a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dc6a242b20f2cf638df809dac6066cb7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\مشروع التخرج\dc6a242b20f2cf638df809dac6066cb7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
