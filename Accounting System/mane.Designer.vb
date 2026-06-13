@@ -23,6 +23,8 @@ Partial Class mane
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.rbInternal = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.rbExternal = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -394,6 +396,8 @@ Partial Class mane
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.rbInternal)
+        Me.Guna2GroupBox1.Controls.Add(Me.rbExternal)
         Me.Guna2GroupBox1.Controls.Add(Me.Label14)
         Me.Guna2GroupBox1.Controls.Add(Me.TextBox6)
         Me.Guna2GroupBox1.Controls.Add(Me.Label7)
@@ -405,9 +409,9 @@ Partial Class mane
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.Purple
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(609, 140)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(337, 205)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(337, 215)
         Me.Guna2GroupBox1.TabIndex = 6
-        Me.Guna2GroupBox1.Text = "الايرادات"
+        Me.Guna2GroupBox1.Text = "بيانات الدافع"
         '
         'Label14
         '
@@ -420,15 +424,53 @@ Partial Class mane
         Me.Label14.TabIndex = 12
         Me.Label14.Text = "رقم الدافع"
         '
+        'rbInternal
+        '
+        Me.rbInternal.AutoSize = True
+        Me.rbInternal.Checked = True
+        Me.rbInternal.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbInternal.CheckedState.BorderThickness = 0
+        Me.rbInternal.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbInternal.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.rbInternal.CheckedState.InnerOffset = -4
+        Me.rbInternal.Location = New System.Drawing.Point(219, 45)
+        Me.rbInternal.Name = "rbInternal"
+        Me.rbInternal.Size = New System.Drawing.Size(107, 24)
+        Me.rbInternal.TabIndex = 13
+        Me.rbInternal.TabStop = True
+        Me.rbInternal.Text = "دفع داخلي"
+        Me.rbInternal.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.rbInternal.UncheckedState.BorderThickness = 2
+        Me.rbInternal.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.rbInternal.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'rbExternal
+        '
+        Me.rbExternal.AutoSize = True
+        Me.rbExternal.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbExternal.CheckedState.BorderThickness = 0
+        Me.rbExternal.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbExternal.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.rbExternal.CheckedState.InnerOffset = -4
+        Me.rbExternal.Location = New System.Drawing.Point(90, 45)
+        Me.rbExternal.Name = "rbExternal"
+        Me.rbExternal.Size = New System.Drawing.Size(109, 24)
+        Me.rbExternal.TabIndex = 14
+        Me.rbExternal.Text = "دفع خارجي"
+        Me.rbExternal.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.rbExternal.UncheckedState.BorderThickness = 2
+        Me.rbExternal.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.rbExternal.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.TextBox6.ForeColor = System.Drawing.Color.Purple
-        Me.TextBox6.Location = New System.Drawing.Point(12, 151)
+        Me.TextBox6.Location = New System.Drawing.Point(12, 160)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox6.Multiline = True
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(201, 45)
+        Me.TextBox6.Size = New System.Drawing.Size(201, 35)
         Me.TextBox6.TabIndex = 11
         Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -437,7 +479,7 @@ Partial Class mane
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arabic11 BT", 13.8!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Purple
-        Me.Label7.Location = New System.Drawing.Point(239, 154)
+        Me.Label7.Location = New System.Drawing.Point(239, 160)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 39)
         Me.Label7.TabIndex = 10
@@ -447,11 +489,11 @@ Partial Class mane
         '
         Me.TextBox7.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.TextBox7.ForeColor = System.Drawing.Color.Purple
-        Me.TextBox7.Location = New System.Drawing.Point(12, 98)
+        Me.TextBox7.Location = New System.Drawing.Point(12, 115)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(201, 48)
+        Me.TextBox7.Size = New System.Drawing.Size(201, 35)
         Me.TextBox7.TabIndex = 9
         Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -459,11 +501,11 @@ Partial Class mane
         '
         Me.TextBox9.Font = New System.Drawing.Font("Tahoma", 8.0!)
         Me.TextBox9.ForeColor = System.Drawing.Color.Purple
-        Me.TextBox9.Location = New System.Drawing.Point(12, 47)
+        Me.TextBox9.Location = New System.Drawing.Point(12, 75)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox9.Multiline = True
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(201, 47)
+        Me.TextBox9.Size = New System.Drawing.Size(201, 35)
         Me.TextBox9.TabIndex = 7
         Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -472,7 +514,7 @@ Partial Class mane
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Arabic11 BT", 13.8!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Purple
-        Me.Label9.Location = New System.Drawing.Point(219, 106)
+        Me.Label9.Location = New System.Drawing.Point(219, 115)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(93, 39)
         Me.Label9.TabIndex = 6
@@ -1015,6 +1057,8 @@ Partial Class mane
     Friend WithEvents ToolStripMenuItem27 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem28 As ToolStripMenuItem
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents rbInternal As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents rbExternal As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox7 As TextBox
