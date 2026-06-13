@@ -155,6 +155,33 @@ Public Class mane
 
 
     Private Sub mane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' تهيئة وتطوير بنية قاعدة البيانات لدعم الميزات الجديدة
+        Try
+            OpenConnection()
+            ' 1. تحويل رقم الطالبة إلى نص ليدعم الأرقام الخارجية (EXT-...)
+            Try
+                Dim cmd1 As New OleDbCommand("ALTER TABLE payment ALTER COLUMN StudentID TEXT(50)", conn)
+                cmd1.ExecuteNonQuery()
+            Catch : End Try
+
+            ' 2. إضافة حقل الهاتف لجدول الدفع (إذا لم يكن موجوداً) لحفظ هاتف الداعم
+            Try
+                Dim cmd2 As New OleDbCommand("ALTER TABLE payment ADD COLUMN Phone TEXT(20)", conn)
+                cmd2.ExecuteNonQuery()
+            Catch : End Try
+
+            ' 3. التأكد من حقول جدول سندات القبض
+            Try
+                Dim cmd3 As New OleDbCommand("ALTER TABLE ReceiptVoucher ADD COLUMN PayerName TEXT(100)", conn)
+                cmd3.ExecuteNonQuery()
+            Catch : End Try
+
+        Catch ex As Exception
+            ' معالجة عامة للأخطاء غير المتوقعة
+        Finally
+            CloseConnection()
+        End Try
+
         RefreshGrid()
         LoadStatistics() ' تشغيل الإحصائيات فور الفتح لتظهر في لابل 6 ولابل 11
         TextBox9.Focus()
@@ -175,6 +202,45 @@ Public Class mane
         Timer1.Start()
     End Sub
 
+    Function GenerateExternalID() As String
+        Dim nextID As Integer = 1
+        Try
+            OpenConnection()
+            ' جلب أقصى رقم دافع مسجل يبدأ بترميز الخارجي
+            Dim sql As String = "SELECT MAX(VAL(MID(StudentID, 5))) FROM payment WHERE StudentID LIKE 'EXT-%'"
+            Dim cmd As New OleDbCommand(sql, conn)
+            Dim result = cmd.ExecuteScalar()
+            If Not IsDBNull(result) AndAlso result IsNot Nothing Then
+                nextID = Convert.ToInt32(result) + 1
+            End If
+        Catch ex As Exception
+        Finally
+            CloseConnection()
+        End Try
+        Return "EXT-" & nextID.ToString("D4")
+    End Function
+
+    Private Sub rbExternal_CheckedChanged(sender As Object, e As EventArgs) Handles rbExternal.CheckedChanged
+        If rbExternal.Checked Then
+            TextBox9.Enabled = False
+            TextBox9.Text = GenerateExternalID()
+            TextBox7.Clear()
+            TextBox6.Clear()
+            TextBox7.Focus()
+            ComboBox4.Text = "دعم المكتب"
+        End If
+    End Sub
+
+    Private Sub rbInternal_CheckedChanged(sender As Object, e As EventArgs) Handles rbInternal.CheckedChanged
+        If rbInternal.Checked Then
+            TextBox9.Enabled = True
+            TextBox9.Clear()
+            TextBox7.Clear()
+            TextBox6.Clear()
+            TextBox9.Focus()
+        End If
+    End Sub
+
 
 
 
@@ -182,8 +248,11 @@ Public Class mane
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            If TextBox9.Text = "" Then
+            If rbInternal.Checked AndAlso TextBox9.Text = "" Then
                 MsgBox("أدخل رقم الطالبة أولاً", MsgBoxStyle.Exclamation)
+                Exit Sub
+            ElseIf rbExternal.Checked AndAlso TextBox7.Text = "" Then
+                MsgBox("أدخل اسم الداعم أولاً", MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
 
@@ -194,11 +263,15 @@ Public Class mane
 
             OpenConnection()
 
-            ' 1. حفظ في جدول الدفع المالي (payment) - تم إبدال حقل payment_Source بـ RevenueTypeID ليطابق قاعدة بياناتكِ
-            Dim sql As String = "INSERT INTO payment (StudentID, StudentName, paid_Amount, payment_Date, payment_Method, RevenueTypeID, Notes) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            ' 1. حفظ في جدول الدفع المالي (payment) - تم إضافة حقل Phone
+            Dim sql As String = "INSERT INTO payment (StudentID, StudentName, Phone, paid_Amount, payment_Date, payment_Method, RevenueTypeID, Notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
             Dim cmd As New OleDbCommand(sql, conn)
-            cmd.Parameters.AddWithValue("?", TextBox9.Text)
-            cmd.Parameters.AddWithValue("?", TextBox7.Text)
+
+            ' في حالة الدفع الخارجي نستخدم المعرف المولد وبيانات الداعم المدخلة
+            cmd.Parameters.AddWithValue("?", TextBox9.Text) ' StudentID (أو معرف الداعم)
+            cmd.Parameters.AddWithValue("?", TextBox7.Text) ' StudentName (أو اسم الداعم)
+            cmd.Parameters.AddWithValue("?", TextBox6.Text) ' Phone (رقم الهاتف)
+
             cmd.Parameters.AddWithValue("?", Val(TextBox4.Text))
             cmd.Parameters.AddWithValue("?", DateTimePicker1.Value)
             cmd.Parameters.AddWithValue("?", ComboBox1.Text)
@@ -207,12 +280,14 @@ Public Class mane
             cmd.ExecuteNonQuery()
 
             ' 2. حفظ في جدول سندات القبض (ReceiptVoucher)
-            Dim sqlReceipt As String = "INSERT INTO ReceiptVoucher (ReceiptDate, StudentID, Amount, Notes) VALUES (?, ?, ?, ?)"
+            ' نستخدم الحقول الأكثر استقراراً في قاعدة البيانات الحالية لضمان عدم الانهيار
+            Dim sqlReceipt As String = "INSERT INTO ReceiptVoucher (ReceiptDate, VoucherNo, Amount, PayerName, Notes) VALUES (?, ?, ?, ?, ?)"
             Dim cmdReceipt As New OleDbCommand(sqlReceipt, conn)
             cmdReceipt.Parameters.AddWithValue("?", DateTimePicker1.Value)
-            cmdReceipt.Parameters.AddWithValue("?", TextBox9.Text)
+            cmdReceipt.Parameters.AddWithValue("?", "V-" & TextBox9.Text)
             cmdReceipt.Parameters.AddWithValue("?", Val(TextBox4.Text))
-            cmdReceipt.Parameters.AddWithValue("?", ComboBox4.Text)
+            cmdReceipt.Parameters.AddWithValue("?", TextBox7.Text)
+            cmdReceipt.Parameters.AddWithValue("?", TextBox8.Text)
             cmdReceipt.ExecuteNonQuery()
 
             MsgBox("تم حفظ عملية الدفع بنجاح وصدر سند القبض تلقائياً.", MsgBoxStyle.Information, "نجاح الحفظ")
@@ -247,6 +322,7 @@ Public Class mane
 
 
     Private Sub TextBox9_TextChanged(sender As Object, e As EventArgs) Handles TextBox9.TextChanged
+        If rbExternal.Checked Then Exit Sub ' تخطي البحث في حالة الدفع الخارجي
         Try
             If String.IsNullOrEmpty(TextBox9.Text) OrElse Not IsNumeric(TextBox9.Text) Then
                 TextBox7.Clear()

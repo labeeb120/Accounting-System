@@ -74,9 +74,9 @@ Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Clic
 
         OpenConnection()
 
-        ' جملة SQL المعدلة (تمكين الـ StudentID من استقبال قيم نصية أو Null)
-        Dim sql As String = "INSERT INTO payment (StudentID, StudentName, paid_Amount, payment_Date, payment_Method, RevenueTypeID, Notes) " & _
-                            "VALUES (?, ?, ?, ?, ?, ?, ?)"
+        ' جملة SQL المعدلة (تم إضافة حقل Phone)
+        Dim sql As String = "INSERT INTO payment (StudentID, StudentName, Phone, paid_Amount, payment_Date, payment_Method, RevenueTypeID, Notes) " & _
+                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
 
         Dim cmd As New OleDbCommand(sql, conn)
 
@@ -84,9 +84,11 @@ Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Clic
         If rbInternal.Checked Then
             cmd.Parameters.AddWithValue("?", TextBox9.Text) ' رقم الطالبة
             cmd.Parameters.AddWithValue("?", TextBox7.Text) ' اسم الطالبة (من البحث)
+            cmd.Parameters.AddWithValue("?", TextBox6.Text) ' هاتف الطالبة
         Else
             cmd.Parameters.AddWithValue("?", TextBox9.Text) ' رقم الدافع (المولد آلياً EXT-XXX)
             cmd.Parameters.AddWithValue("?", txtDonorName.Text) ' اسم الداعم المكتوب يدوياً
+            cmd.Parameters.AddWithValue("?", txtDonorPhone.Text) ' هاتف الداعم المكتوب يدوياً
         End If
 
         cmd.Parameters.AddWithValue("?", Val(TextBox4.Text))
